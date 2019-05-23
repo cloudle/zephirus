@@ -6,6 +6,7 @@ import { renderRoutes } from 'react-router-config';
 import HomeScene from './scenes/home';
 import WelcomeScene from './scenes/welcome';
 import NotFound from './scenes/notFound';
+import AdminHome from './engine/scenes/home';
 import type { Route, } from './typeDefinition';
 
 type Props = {
@@ -42,7 +43,7 @@ export default [{
 	routes: [{
 		path: '/',
 		exact: true,
-		component: HomeScene,
+		component: AdminHome,
 	}, {
 		path: '/welcome',
 		exact: true,
