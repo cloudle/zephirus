@@ -6,6 +6,7 @@ import { ConnectedRouter } from 'connected-react-router';
 import { renderRoutes } from 'react-router-config';
 import { hot } from 'react-hot-loader/root';
 
+import Admin from './engine/components/admin';
 import routes from './routes';
 import { ruuiStore, appStore } from './store';
 import { history } from './store/reducers';
@@ -17,13 +18,15 @@ type ContainerProps = {
 
 function AppContainer(props: ContainerProps) {
 	const routerAndProps = getRouterAndProps(props),
-		{ component: Router, props: routerProps  } = routerAndProps;
+		{ component: Router, props: routerProps } = routerAndProps;
 
 	return <RuuiProvider store={ruuiStore}>
 		<Provider store={appStore}>
-			<Router {...routerProps}>
-				{renderRoutes(routes)}
-			</Router>
+			<Admin>
+				<Router {...routerProps}>
+					{renderRoutes(routes)}
+				</Router>
+			</Admin>
 		</Provider>
 
 		<Tooltip/>

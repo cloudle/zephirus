@@ -43,7 +43,7 @@ export default [{
 	routes: [{
 		path: '/',
 		exact: true,
-		component: AdminHome,
+		component: HomeScene,
 	}, {
 		path: '/welcome',
 		exact: true,
