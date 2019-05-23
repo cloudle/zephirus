@@ -4,7 +4,7 @@ import { StyleSheet, View, Text, } from 'react-native';
 import Navigator from './navigator';
 import User from './user';
 import SideMenu from './sideMenu';
-import { iStyles, configs } from '../../utils';
+import { iStyles, configs, colors } from '../../utils';
 
 type Props = {
 
@@ -15,10 +15,10 @@ class AdminHome extends Component {
 
 	render() {
 		return <View style={styles.container}>
+			<Navigator/>
 			<View style={styles.headingWrapper}>
 				<View style={iStyles.horizontalContentContainer}>
 					<User/>
-					<Navigator/>
 				</View>
 			</View>
 			<View style={styles.contentWrapper}>
@@ -41,7 +41,7 @@ const styles = StyleSheet.create({
 	},
 	headingWrapper: {
 		height: configs.headingSize,
-		backgroundColor: '#3f47f4',
+		backgroundColor: colors.main,
 	},
 	headingContainer: {
 		flexDirection: 'row',
