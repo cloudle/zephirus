@@ -22,7 +22,6 @@ export default UserArea;
 const styles = StyleSheet.create({
 	container: {
 		width: configs.panelSize,
-		marginTop: configs.navigatorSize,
 		alignItems: 'center',
 	},
 });

@@ -51,6 +51,7 @@ const styles = StyleSheet.create({
 	},
 	contentWrapper: {
 		flex: 1,
+		backgroundColor: colors.white,
 	},
 	contentContainer: {
 		flexDirection: 'row',
@@ -60,6 +61,6 @@ const styles = StyleSheet.create({
 	},
 	innerContentContainer: {
 		flex: 1,
-		marginTop: -(configs.headingSize - configs.navigatorSize),
+		marginTop: -configs.headingSize,
 	},
 });
